@@ -385,6 +385,56 @@ void main(int argc, char *argv[])
     print_bit_pattern(rot_no);
 
 }
+
+====== Assigment
+I. Pls follow the instructions as given in Question. Use bitmap.h and bitsop.h to perform all BIT manipulation operations in assignment questions.
+Questions for this assignment
+
+1. Implement another bitmap API in bitmap.h/.c file as below.
+
+
+bool bitmap_is_full(bitmap_t *bitmap);
+
+API returns TRUE if all bits in the bitmap are set to 1, else return FALSE
+
+2. Implement the below API in bitmap.h/.c
+
+    bool
+
+    bitmap_pattern_match (bitmap_t *bitmap, char *binary_string, int n_bits, int *i);
+
+    The API accepts the argument as follows :
+
+    1. bitmap - ptr to the bitmap
+
+    2. binary_string - ptr to the binary string containing dont care bits, for example, 0001010 x010xx01
+
+    3. n_bits - no of bits in binary string, in this case it should be 15 ( 0001010 x010xx01 )
+
+    4. i - output parameter, must return the starting index where the match starts.
+
+    The API return TRUE if the first match is found, else return FALSE if no match is found.
+
+    API returns as soon as first pattern match is found.
+
+3. Write a looping macro that iterates over bits of a bitmap. Implement it in bitmap.h
+
+
+#define ITERATE_BITMAP_BEGIN(bitmap_ptr , bit_state) \
+
+<provide definition here>
+
+
+#define ITERATE_BITMAP_END(bitmap_ptr , bit_state) \
+
+<provide definition here>
+
+
+where, bitmap_ptr - is the pointer to the bitmap object
+
+and bit_state is a bool type variable which is set to TRUE if the bit in the current iteration of the bitmap is 1 else FALSE
+
+4. Google Bloom Filter and Explore it.
 ************************************************
 
 Release 2 Memory Management Concepts
